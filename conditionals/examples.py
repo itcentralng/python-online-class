@@ -20,19 +20,19 @@ elif 2 in numbers:
 elif 3 in numbers:
     print("Hello world 3 times")
 
-database = {'username': 'admin', 'password': 'admin'}
+# database = {'username': 'admin', 'password': 'admin'}
 
-username = input("Username: ")
-password = input("Password: ")
+# username = input("Username: ")
+# password = input("Password: ")
 
-if username == database['username'] and password == database['password']:
-    print("Access granted")
-elif password != database['password'] and username != database['username']:
-    print("Access denied")
-elif username != database['username']:
-    print("Username incorrect")
-else:
-    print("Password incorrect")
+# if username == database['username'] and password == database['password']:
+#     print("Access granted")
+# elif password != database['password'] and username != database['username']:
+#     print("Access denied")
+# elif username != database['username']:
+#     print("Username incorrect")
+# else:
+#     print("Password incorrect")
 
 # Example 2
 """
@@ -40,3 +40,13 @@ Create a program that asks a user for their name and age.
 If they are 18 or older, print "You can vote"
 If they are younger than 18, print "You can't vote"
 """
+
+name = input("what is your name? ")
+age = input(name + " What is your age? ")
+
+age = int(age)
+
+if age >= 18:
+    print(name + " You can vote")
+else:
+    print("You can't vote")    
