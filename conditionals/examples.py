@@ -84,20 +84,24 @@ else:
 #     print('CAR UNAVAILABLE')
     
     #eg4:
-
+################################################################################
+###############################################################################
+##############################################################################
 #numbers = (1, 2, 3, 4)
-# even_no = (2, 4, 6, 8)
-# odd_no = (1, 3, 5, 7)
 
-# hx = input("input any number? ")
+even_no = (2, 4, 6, 8)
+odd_no = (1, 3, 5, 7)
+
+hx = input("input any number? ")
  
-# if hx in even_no:
-#      print("Even number") 
-# elif hx in odd_no:
-#     print("Odd number")
-# else:
-#     print("Number don't exist") 
-    
+if hx in even_no:    #######>>>>>>>>>>THIS IS NOT WORKING AS EXPECTED#######
+    print("Even number") 
+elif hx in odd_no:
+    print("Odd number")
+else:
+    print("Number don't exist") 
+ #########################################################################################
+ ##########################################################################################   
     
     #eg5:
 # a = 2
@@ -109,12 +113,8 @@ else:
 
 #eg6:
 
-today = 'Wednesday'
+# 5
 
-if today == 'Sunday' or today == 'Saturday':
-	print('Today is off. Rest at home.')
-else:
-	print('Go to work.')
  
      
       
