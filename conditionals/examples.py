@@ -89,12 +89,12 @@ else:
 ##############################################################################
 #numbers = (1, 2, 3, 4)
 
-even_no = (2, 4, 6, 8)
-odd_no = (1, 3, 5, 7)
+even_no = ('2', '4', '6', '8')
+odd_no = ('1', '3', '5', '7')
 
 hx = input("input any number? ")
  
-if hx in even_no:    #######>>>>>>>>>>THIS IS NOT WORKING AS EXPECTED#######
+if hx in even_no:    #######>>>>>>>>>>#######
     print("Even number") 
 elif hx in odd_no:
     print("Odd number")
