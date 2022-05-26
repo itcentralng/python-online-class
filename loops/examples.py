@@ -7,16 +7,16 @@
 
 # For Loops Examples:
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-fruits = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'kiwi', 'grape', 'mango', 'pineapple', 'blueberry']
+# fruits = ['apple', 'banana', 'orange', 'pear', 'strawberry', 'kiwi', 'grape', 'mango', 'pineapple', 'blueberry']
 
-for l in numbers:
-    print(l, fruits[l - 1])
+# for l in numbers:
+#     print(l, fruits[l - 1])
 
-name = 'Adekola'
-for letter in name:
-    print(letter)
+# name = 'Adekola'
+# for letter in name:
+#     print(letter)
 
 users = [{'name': 'Adekola', 'age': '23'}, {'name': 'Adeyinka', 'age': '24'}, {'name': 'Adamu', 'age': '25'}]
 for x in users:
@@ -26,4 +26,35 @@ for x in users:
 # 1. Create a list of numbers and print each number.
 # 2. Create a list of numbers and print each number squared.
 # 3. Create a list of fruits and print each fruit's name, color and taste.
+
+#ans 1.
+# numbs = [1, 3, 5, 6, 7, 9]
+# for nb in numbs:
+#     print(nb)
+    
+    
+#ans 2.
+
+fin = [1, 4, 6, 8, 10]
+for gx in fin:
+    print(gx**2)   
+    
+    
+#ans 3.
+
+fruits = [{'name': 'apple', 'color':'Red', 'taste':'sweet'}, {'name': 'mango', 'color': 'green', 'taste': 'not sweet'}, {'name': 'guava', 'color': 'blue', 'taste': 'very sweet'}]
+for f in fruits:
+    #print(f.get('name'), f.get('color'), f.get('taste'))    
+    
+    kol = f.get('name') + "   |" + f.get('color') + "   |" + f.get('taste')
+
+    print(kol) 
+    
+    
+    
+    
+      
+    
+
+
 
