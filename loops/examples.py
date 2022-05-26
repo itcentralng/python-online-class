@@ -28,9 +28,9 @@ for x in users:
 # 3. Create a list of fruits and print each fruit's name, color and taste.
 
 #ans 1.
-# numbs = [1, 3, 5, 6, 7, 9]
-# for nb in numbs:
-#     print(nb)
+numbs = [1, 3, 5, 6, 7, 9]
+for nb in numbs:
+    print(nb)
     
     
 #ans 2.
@@ -49,12 +49,25 @@ for f in fruits:
     kol = f.get('name') + "   |" + f.get('color') + "   |" + f.get('taste')
 
     print(kol) 
-    
-    
-    
-    
-      
-    
 
+print("\n\n\n\n\n")
 
+# While Loops Examples:
 
+import random
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+while True:
+    number = random.choice(numbers)
+    answer = input("I have a number, can you guess it?: \n")
+    if answer == 'exit':
+        break
+    elif answer == str(number):
+        print('You got it!')
+    else:
+        print('Nope, try again')
+
+# Exercise:
+# 1. Upgrade the above game to show the user thier point, assuming every correct guess gives them 5 points and every incorrect guess subtracts 1 point.
+# 2. Create a State and Capital game that shows a user a state and asks them to guess the capital. Each time they get it right, they get 5 points and when they get it wrong, they lose 1 point. The user should be able to stop the game when they type in 'exit'.
