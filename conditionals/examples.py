@@ -74,8 +74,7 @@ else:
    # eg3:
    
 # cars = ['lexus', 'toyota', 'jeep', 'volkwagen', 'Audi']
-# xn = str(cars)
-# xn.casefold()  #<<<notice this didnt work
+# xn = str(cars).casefold()
 # imp = input("What type of car do you want? ")
 
 # if imp in xn:
