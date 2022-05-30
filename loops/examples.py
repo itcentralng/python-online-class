@@ -55,19 +55,97 @@ print("\n\n\n\n\n")
 # While Loops Examples:
 
 import random
+import math
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
+points = 0
 while True:
     number = random.choice(numbers)
+  
     answer = input("I have a number, can you guess it?: \n")
     if answer == 'exit':
         break
     elif answer == str(number):
-        print('You got it!')
+        points += 5
+        counts = -1
+        print('You got it! and have earned: ', points + ' points') 
     else:
-        print('Nope, try again')
+        print('Nope, You have lost 1 point, you now have:', counts - 1) 
+    
+    play_again = input("Play again? (y/n): ")
+    if play_again.lower() != "y":
+        break
+
 
 # Exercise:
 # 1. Upgrade the above game to show the user thier point, assuming every correct guess gives them 5 points and every incorrect guess subtracts 1 point.
 # 2. Create a State and Capital game that shows a user a state and asks them to guess the capital. Each time they get it right, they get 5 points and when they get it wrong, they lose 1 point. The user should be able to stop the game when they type in 'exit'.
+
+print('\n\n\n')
+
+MIN = 0
+MAX = 49
+
+
+
+
+state = {'Abia': 'Umuahia',
+                'Adamawa': 'Yola',
+                 'Akwa Ibom': 'Uyo',
+                 'Anambra': 'Awka',
+                 'Bauchi': 'Bauchi',
+                 'Bayelsa': 'Yenagoa',
+                 'Benue': 'Makurdi',
+                 'Borno': 'Maiduguri',
+                 'Cross River': 'Calabar',
+                 'Delta': 'Asaba',
+                 'Ebonyi': 'Abakaliki',
+                 'Edo': 'Benin City',
+                 'Ekiti': 'Ado-ekiti',
+                 'Enugu': 'Enugu',
+                 'Gombe': 'Gombe',
+                 'Imo': 'Owerri',
+                 'Jigawa': 'Dutse',
+                 'Kaduna': 'Kaduna',
+                 'Kano': 'Kano',
+                 'Katsina': 'Katsina',
+                 'Kebbi': 'Birnin Kebbi',
+                 'Kogi': 'Lokija',
+                 'Kwara': 'Ilorin',
+                 'Lagos': 'Ikeja',
+                 'Nasarawa': 'Lafia',
+                 'Niger': 'Minna',
+                 'Ogun': 'Abeokuta',
+                 'Ondo': 'Akure',
+                 'Osun': 'Oshogbo',
+                 'Oyo': 'Ibadan',
+                 'Plateau': 'Jos',
+                 'River': 'Port Harcourt',
+                 'Sokoto': 'Sokoto',
+                 'Taraba': 'Jalingo',
+                 'Yobe': 'Damaturu',
+                 'Zamfara': 'Gusau',
+            }
+key_state =  list(state.keys())
+value_state = list(state.value())
+
+while True:
+    req = random.choice(key_state):
+        
+    print(req)
+    usd = input("Guess the capital")
+    
+    if usd == 'exit':
+            break
+    elif usd == str(req):
+        points += 5
+        counts = -1
+        print('Correct! and have earned: ', points + ' points') 
+    elif usd != req:
+        print('Wrong answer, try again! You have lost 1 point' + '-' counts) 
+            
+        
+        
+        
+        
+    
