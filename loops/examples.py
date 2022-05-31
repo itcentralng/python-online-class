@@ -28,9 +28,9 @@ for x in users:
 # 3. Create a list of fruits and print each fruit's name, color and taste.
 
 #ans 1.
-numbs = [1, 3, 5, 6, 7, 9]
-for nb in numbs:
-    print(nb)
+# numbs = [1, 3, 5, 6, 7, 9]
+# for nb in numbs:
+#     print(nb)
     
     
 #ans 2.
@@ -42,13 +42,13 @@ for gx in fin:
     
 #ans 3.
 
-fruits = [{'name': 'apple', 'color':'Red', 'taste':'sweet'}, {'name': 'mango', 'color': 'green', 'taste': 'not sweet'}, {'name': 'guava', 'color': 'blue', 'taste': 'very sweet'}]
-for f in fruits:
-    #print(f.get('name'), f.get('color'), f.get('taste'))    
+# fruits = [{'name': 'apple', 'color':'Red', 'taste':'sweet'}, {'name': 'mango', 'color': 'green', 'taste': 'not sweet'}, {'name': 'guava', 'color': 'blue', 'taste': 'very sweet'}]
+# for f in fruits:
+#     #print(f.get('name'), f.get('color'), f.get('taste'))    
     
-    kol = f.get('name') + "   |" + f.get('color') + "   |" + f.get('taste')
+#     kol = f.get('name') + "   |" + f.get('color') + "   |" + f.get('taste')
 
-    print(kol) 
+#     print(kol) 
 
 print("\n\n\n\n\n")
 
@@ -56,6 +56,7 @@ print("\n\n\n\n\n")
 
 import random
 import math
+from tkinter.messagebox import NO, YES
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 points = 0
@@ -67,14 +68,15 @@ while True:
         break
     elif answer == str(number):
         points += 5
-        counts = -1
-        print('You got it! and have earned: ', points + ' points') 
+        
+        print('You got it! and have earned: ', points,  ' points') 
     else:
-        print('Nope, You have lost 1 point, you now have:', counts - 1) 
+        points -= 1
+        print('Nope, You have lost 1 point, you now have:' +  str(points)) 
     
-    play_again = input("Play again? (y/n): ")
-    if play_again.lower() != "y":
-        break
+    # play_again = input("Play again? (y/n): ")
+    # if play_again.lower() != "y":
+    #     break
 
 
 # Exercise:
@@ -83,9 +85,8 @@ while True:
 
 print('\n\n\n')
 
-MIN = 0
-MAX = 49
-
+##############################################################################################################################################################################
+#############################################################################################################################################################################
 
 
 
@@ -127,25 +128,89 @@ state = {'Abia': 'Umuahia',
                  'Zamfara': 'Gusau',
             }
 key_state =  list(state.keys())
-value_state = list(state.value())
+points = 0
+wrong_answers = 0
+
 
 while True:
-    req = random.choice(key_state):
+    req = random.choice(key_state)
         
-    print(req)
-    usd = input("Guess the capital")
+    if wrong_answers == 10:
+        me = input('         Do you wish to continue the game? ' + '\n y=YES \n n=NO \n >>>>  ')
+       
     
-    if usd == 'exit':
+    
+        if me == "n":
+            print('Weldone, Play again soon \n\n')
             break
-    elif usd == str(req):
-        points += 5
-        counts = -1
-        print('Correct! and have earned: ', points + ' points') 
-    elif usd != req:
-        print('Wrong answer, try again! You have lost 1 point' + '-' counts) 
-            
-        
-        
-        
-        
+        else:
+            wrong_answers = 0
+            print('Keep riding')
     
+    usd = input("What is the Capital of: " +  req + '\n\n')
+
+
+    if usd == 'q':
+        ask = input('                Do you really want to quit the game.   [Y / N] \n\n')
+        #########################  NOTICE  ##############################################
+        if ask.casefold() == 'Y':
+            print(' Look forward to you playing soon again. cheers!')     #>>>>statement is not active
+            break
+        else:
+            print('\n Goodluck! \n')
+            continue
+     
+    elif usd.casefold().replace(" ", "") == state.get(req).casefold().replace(" ", ""):
+ 
+       #YOU CAN USE THIS METHOD TOO $$$$$$$$$$$$$$>>>>>>>#ASSIGNING OF A VARIABLE TO THE STATEMENT 
+       #    x = usd.replace("", "*")
+       
+        
+        points += 5
+        wrong_answers = 0
+        
+        print(' Correct! and have earned: ' +  str(points) + ' points \n') 
+    else:
+        points -= 1
+        wrong_answers += 1
+        print(' Wrong answer, try again! You have lost 1 point' + " " + str(points) + '\n')
+        
+        
+########>>>>>>>Add a function that will exit the game and also restart the game automatically<<<<#####################################################################
+
+
+
+
+
+
+
+
+
+
+
+######################################################################################################################################
+#eg 4 A program that print out speed, from the given details of distance and time.
+print('  ****                 NEW GAME             ****  \n\n\n')
+
+distance = float(input("Enter the distance to work in kilometers: \n"))
+
+time = float(input(" Enter time of arrival in hours: \n"))
+
+speed = distance/time
+
+print(" Speed is: ", speed, "kph \n\n")
+
+
+while True:
+#   distance = float(input("Enter the distance in kilometers: "))
+#   time = float(input("Enter the time in hours: "))
+#   speed = distance/time
+#   print("Speed is:", speed, "kph")
+
+
+  check = input(
+      "Do you want to quit or start again? enter Y to restart or another key to end: ")
+  if check.upper() == "Y":  # go back to the top
+    continue
+    print("    Bye...")
+    break
