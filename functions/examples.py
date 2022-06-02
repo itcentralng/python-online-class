@@ -55,3 +55,56 @@ print(getFirstLetter())
 # Exercise:
 # 1. Create a function that takes a list of numbers and returns a new list with only the even numbers.
 # 2. Create a function that takes a list of numbers and returns a new list with only the odd numbers.
+
+#eg1.
+
+#method 1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+def takeListNumber():
+    
+     list = [1, 2, 3, 4, 5, 6]
+     even_no = [n for n in list if n%2 == 0]
+     print(even_no)
+    
+print('The following are even numbers', takeListNumber())
+
+takeListNumber()
+    
+    #method 2<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#     list = [1, 2, 3, 4, 5, 6]
+#     even_noo = []
+#     for n in list:
+        
+#         n%2 == 0
+#         print(n)
+#     even_noo.extend(n) 
+    
+# print('The following are even numbers', takeListNumber())
+    
+# takeListNumber()
+# time.sleep(2)
+    
+    
+
+
+#print('The following numbers are even numbers: ', takeListNumber())    
+    
+    
+    #for n in list:
+       # if n%2 == 0:
+         #   print(n)
+            
+        
+#ANSWER TO Example 2.
+
+def takeListNumbers():
+
+    list = [1, 2, 3, 4, 5, 6]
+    odd_no = [n for n in list if n % 2 == 1]
+    print(odd_no)
+
+
+print('The following are even numbers', takeListNumbers())
+
+takeListNumbers()
+
+
