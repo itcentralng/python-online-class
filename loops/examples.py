@@ -153,7 +153,7 @@ while True:
     if usd == 'q':
         ask = input('                Do you really want to quit the game.   [Y / N] \n\n')
         #########################  NOTICE  ##############################################
-        if ask.casefold() == 'Y':
+        if ask.upper() == 'Y':
             print(' Look forward to you playing soon again. cheers!')     #>>>>statement is not active
             break
         else:
@@ -191,26 +191,19 @@ while True:
 ######################################################################################################################################
 #eg 4 A program that print out speed, from the given details of distance and time.
 print('  ****                 NEW GAME             ****  \n\n\n')
-
-distance = float(input("Enter the distance to work in kilometers: \n"))
-
-time = float(input(" Enter time of arrival in hours: \n"))
-
-speed = distance/time
-
-print(" Speed is: ", speed, "kph \n\n")
-
-
 while True:
-#   distance = float(input("Enter the distance in kilometers: "))
-#   time = float(input("Enter the time in hours: "))
-#   speed = distance/time
-#   print("Speed is:", speed, "kph")
+    distance = float(input("Enter the distance to work in kilometers: \n"))
 
+    time = float(input(" Enter time of arrival in hours: \n"))
 
-  check = input(
-      "Do you want to quit or start again? enter Y to restart or another key to end: ")
-  if check.upper() == "Y":  # go back to the top
-    continue
-    print("    Bye...")
-    break
+    speed = distance/time
+
+    print(" Speed is: ", speed, "kph \n\n")
+
+    check = input(
+        "Do you want to quit or start again? enter Y to restart or another key to end: ")
+    if check.upper() == "Y":  # go back to the top
+        continue
+    else:
+        print("    Bye...")
+        break
